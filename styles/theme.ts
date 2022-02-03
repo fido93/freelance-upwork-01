@@ -1,31 +1,6 @@
 // theme.js
 import { extendTheme } from "@chakra-ui/react";
 
-const HeroTitleBox = {
-  baseStyle: {},
-  variants: {
-    heroSubTitleLanding: {
-      textTransform: "uppercase",
-      position: "absolute",
-      color: "#FBD784",
-      fontSize: "18px",
-    },
-    rounded: {
-      padding: 8,
-      borderRadius: "xl",
-      boxShadow: "xl",
-    },
-    smooth: {
-      padding: 6,
-      borderRadius: "base",
-      boxShadow: "md",
-    },
-  },
-  defaultProps: {
-    variant: "smooth",
-  },
-};
-
 const theme = extendTheme({
   styles: {
     global: {
@@ -35,7 +10,6 @@ const theme = extendTheme({
     },
   },
   components: {
-    HeroTitleBox,
     Button: {
       baseStyle: {
         fontWeight: "bold", // Normally, it is "semibold"
