@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ApolloProvider client={graphqlClient}>
       <ParallaxProvider>
-        <ChakraProvider resetCSS theme={customTheme}>
+        <ChakraProvider theme={customTheme}>
           <Component {...pageProps} />
         </ChakraProvider>
       </ParallaxProvider>

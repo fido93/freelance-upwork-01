@@ -29,6 +29,23 @@ const overrides = {
     "5xl": "48px",
     "6xl": "64px",
   },
+  colors: {
+    primary: "#000000",
+    secondary: "#FBD784",
+    white: "#ffffff",
+  },
+  components: {
+    Iframe: {
+      variants: {
+        videoIframe: {
+          border: "none",
+          margin: "0",
+          padding: "0",
+          display: "block",
+        },
+      },
+    },
+  },
 };
 
 const customTheme = extendTheme(overrides);
