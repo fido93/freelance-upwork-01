@@ -7,14 +7,27 @@ import { ApolloProvider } from "@apollo/client";
 import { graphqlClient } from "../utils/gqlClient";
 import { Global, css } from "@emotion/react";
 import customTheme from "../styles/landing/theme";
+import { useEffect, useState } from "react";
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const [pageURL, setPageURL] = useState<string>("");
+  useEffect(() => {
+    const url = window.location.pathname;
+    const regex_url = url.replace(/\//g, "");
+    setPageURL(regex_url);
+  }, []);
   return (
     <ApolloProvider client={graphqlClient}>
       <ParallaxProvider>
-        <ChakraProvider theme={customTheme}>
-          <Component {...pageProps} />
-        </ChakraProvider>
+        {pageURL == "landing" ? (
+          <ChakraProvider theme={customTheme}>
+            <Component {...pageProps} />
+          </ChakraProvider>
+        ) : (
+          <ChakraProvider theme={theme}>
+            <Component {...pageProps} />
+          </ChakraProvider>
+        )}
       </ParallaxProvider>
     </ApolloProvider>
   );
