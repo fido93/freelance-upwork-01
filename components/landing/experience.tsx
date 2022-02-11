@@ -11,7 +11,7 @@ import {
   Heading,
   Button,
   Grid,
-  GridItem,
+  GridItem
 } from "@chakra-ui/react";
 import Navbar from "../base/landing/navbar";
 
@@ -41,37 +41,38 @@ const Experience = () => {
     <>
       <Stack as="section" position="relative">
         <Box backgroundImage="url('images/landing/hero/hero bg.webp')">
-          <Container maxW={"8xl"} zIndex={10} position={"relative"}>
+          <Container maxW={"8xl"} zIndex={10} padding={['0 30px','inherit']} position={"relative"}>
             <Navbar pt={"3em"} pb={{ base: "3em", md: "6em" }} />
-            <Flex as="div" pt={10} pb={10} position="relative">
+            <Flex as="div" pt={[0, 10]} pb={10} position="relative">
               <Grid
+                display={["block", "grid"]}
                 templateColumns="repeat(5, 1fr)"
                 gap={2}
                 position="relative"
               >
                 <GridItem position="relative" colSpan={2}>
                   <Box
-                    p={8}
+                    p={[0, 8]}
                     position="relative"
                     alignItems="center"
-                    display="flex"
+                    display={["block", "flex"]}
                   >
                     <Box
-                      p={8}
+                      p={[3, 8]}
                       position="relative"
                       alignItems="center"
                       display="flex"
-                      bottom="-58px"
-                      left="-40px"
+                      bottom={["none", "-58px"]}
+                      left={["0", "-40px"]}
                     >
                       <Box
                         as="div"
-                        width="72px"
+                        width={["40px", "72px"]}
                         height="2px"
                         backgroundColor="secondary"
                       ></Box>
                       <Text
-                        fontSize={["lg"]}
+                        fontSize={["sm", "lg"]}
                         pl={5}
                         letterSpacing="6px"
                         textTransform="uppercase"
@@ -89,18 +90,18 @@ const Experience = () => {
                       fontFamily="Cormorant"
                       fontStyle="normal"
                       fontWeight="bold"
-                      fontSize="64px"
+                      fontSize={["4xl", "6xl"]}
                       lineHeight="78px"
-                      mb={10}
+                      mb={[5, 10]}
                     >
                       DATUM JELATEK
                     </Text>
                     <Button
-                      padding="30px"
-                      width="280px"
-                      border="4px solid #FFFFFF"
+                      padding={['26px 0','30px']}
+                      width={['40%',"280px"]}
+                      border={['2px solid #ffffff',"4px solid #FFFFFF"]}
                       backgroundColor="transparent"
-                      fontSize="30px"
+                      fontSize={['20px','30px']}
                       textTransform="capitalize"
                       color="white"
                     >
@@ -137,8 +138,9 @@ const Experience = () => {
         pt={10}
         mb={0}
         width="100%"
+        zIndex={['30']}
       >
-        <Container maxW={"8xl"} zIndex={10} position={"relative"}>
+        <Container maxW={"8xl"} padding={['0 30px','inherit']} zIndex={10} position={"relative"}>
           <Flex
             as="div"
             flexDirection="column"
@@ -148,7 +150,7 @@ const Experience = () => {
             <SimpleGrid>
               <Box p={8} position="relative" alignItems="center" display="flex">
                 <Text
-                  fontSize="160px"
+                  fontSize={["86px","160px"]}
                   lineHeight="240px"
                   position="absolute"
                   left="0"
